@@ -17,6 +17,9 @@ void draw()
   }
 } 
 void mousePressed() {
+  fill(0, 0, 0, 100);
+  rectMode(CENTER);
+  rect(mouseX, mouseY, 50, 50);
 }
 class Bacteria    
 {     
