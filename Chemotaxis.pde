@@ -24,17 +24,24 @@ void mousePressed() {
 class Bacteria    
 {     
   int myX, myY, myColor;
+  String col;
   Bacteria() {
     myX = 200;
     myY = 200;
     myColor = color(212, 180, 255, 10);
+    col = "212, 180, 255, 10";
   }
   void walk() {
-    myX = myX + (int)(Math.random() * 7) - 3; //change myX into mouseX?
+    myX = myX + (int)(Math.random() * 7) - 3;
     myY = myY + (int)(Math.random() * 7) - 3;
     if(myX < 10 || myX > 390 || myY < 10 || myY > 390) {
       myX = myY = 200;
       myColor = color(175, 238, 255, 10);
+      col = "175, 238, 255, 10";
+    } else if((col == "175, 238, 255, 10") && (myX < 10 || myX > 390 || myY < 10 || myY > 390)) {
+      myX = myY = 200;
+      myColor = color(212, 180, 255, 10);
+      col = "212, 180, 255, 10";
     }
   }
   void show() {
